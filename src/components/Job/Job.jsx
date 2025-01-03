@@ -18,7 +18,10 @@ const Job = ({ job }) => {
             <button className="x-5 py-2 font-extrabold border rounded
             mr-4">{job_type}</button>
           </div>
-
+            <div>
+                <h2 className="flex"> <MdLocation className="text-2xl"></MdLocation>
+              {Location} </h2>
+            </div>
           <div className="card-actions">
             <button className="btn btn-primary">Buy Now</button>
           </div>
