@@ -7,7 +7,22 @@ import { list } from "postcss";
 const Appliedjobs = () => {
     const jobs = useLoaderData();
     const [appliedJobs, setAppliedJobs] = useState([]);
+    const [displayJobs, setDisplayJobs] = useState([];)
+   
+    const handleJobsFilter = filter =>{
+        if(filter === 'all'){
+            setDisplayJobs(appliedJobs);
+        }
+        else if (filter === 'remote'){
+            const remoteJobs = appliedJobs.filter
+            (job => job.remote_or_onsite === 'remote')
+            setDisplayJobs(remoteJobs);
 
+        }
+    }
+   
+   
+   
     useEffect( () =>{
         const storedJobIds = getStoredJobApplication();
         // if(jobs.lenght > 0){
@@ -22,6 +37,7 @@ const Appliedjobs = () => {
         }
     }
     setAppliedJobs(jobsApplied);
+    setDisplayJobs(displayJobs);
 
     return (
         <div>
