@@ -28,7 +28,8 @@ import Jobdetails from './components/Jobdetails/Jobdetails';
       },
       {
         path: '/job/:id',
-        element:<Jobdetails></Jobdetails>
+        element:<Jobdetails></Jobdetails>,
+        loader: () => fetch('../job.json')
       }
 
     ]

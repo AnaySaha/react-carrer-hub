@@ -1,7 +1,7 @@
 
 
 const Job = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location,
+    const {id, logo, job_title, company_name, remote_or_onsite, location,
         job_type, salary} = job;
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
@@ -23,7 +23,8 @@ const Job = ({ job }) => {
               {Location} </h2>
             </div>
           <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
+            <Link to={`/job/${id}`}></Link>
+            <button className="btn btn-primary">View Details</button>
           </div>
         </div>
       </div>
