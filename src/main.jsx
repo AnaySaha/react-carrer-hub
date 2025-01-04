@@ -25,6 +25,7 @@ import Jobdetails from './components/Jobdetails/Jobdetails';
       {
         path: '/applied',
         element: <Appliedjobs></Appliedjobs>
+         loader: () => fetch('../job.json')
       },
       {
         path: '/job/:id',
